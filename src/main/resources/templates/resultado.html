@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultado de la búsqueda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .center-container {
+            min-height: 100%;
+        }
+
+        .container{
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+<div class="d-flex justify-content-center align-items-center center-container">
+<div class="container">
+    <h2>Rueditas - Resultado de la búsqueda</h2>
+
+    <p><strong>Marca:</strong> <span th:text="${placaModel.marca}"></span></p>
+    <p><strong>Modelo:</strong> <span th:text="${placaModel.modelo}"></span></p>
+    <p><strong>Número de asientos:</strong> <span th:text="${placaModel.numeroAsientos}"></span></p>
+    <p><strong>Precio:</strong> <span th:text="${placaModel.precio}"></span></p>
+    <p><strong>Color:</strong> <span th:text="${placaModel.color}"></span></p>
+
+    <a href="/placa/buscar" class="btn btn-primary">Regresar</a>
+</div>
+</div>
+</body>
+</html>

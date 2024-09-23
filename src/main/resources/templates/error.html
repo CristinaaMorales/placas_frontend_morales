@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error en la búsqueda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .center-container {
+            min-height: 100%;
+        }
+
+        .container{
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+<div class="d-flex justify-content-center align-items-center center-container">
+<div class="container">
+    <h2>Rueditas - Error en la búsqueda</h2>
+    <div class="alert alert-danger">
+        <p>Ocurrió un error durante la búsqueda del vehículo. Por favor, intente de nuevo más tarde.</p>
+    </div>
+    <a href="/placa/buscar" class="btn btn-primary">Regresar</a>
+</div>
+</div>
+</body>
+</html>

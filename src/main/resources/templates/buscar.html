@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Buscar Vehículo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .center-container {
+            min-height: 100%;
+        }
+
+        .container{
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+<div class="d-flex justify-content-center align-items-center center-container">
+<div class="container">
+    <h2>Rueditas - Buscar Vehículo</h2>
+    <form th:action="@{/placa/validar}" method="post">
+        <div class="form-group">
+            <label for="placa">Ingrese una placa:</label>
+            <input type="text" class="form-control" id="placa" name="placa" placeholder="Ingrese una placa con el formato XXX-123">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+
+        <!-- mensajes -->
+        <div th:if="${placaModel.codigo == '01' || placaModel.codigo == '02'}" class="alert alert-danger mt-3">
+            <p th:text="${placaModel.mensaje}"></p>
+        </div>
+    </form>
+</div>
+</div>
+
+</body>
+</html>
